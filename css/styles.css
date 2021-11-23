@@ -27,14 +27,29 @@ body {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 /* Button*/
 button {
   font-family: inherit;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
+  text-align: center;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
 }
 
 /* Header */
+
 .logo-link {
   font-family: Raleway;
   font-style: normal;
@@ -51,8 +66,27 @@ button {
 .logo-link-studio {
   color: var(--black-color);
 }
+.main-nav {
+  display: flex;
+  align-items: center;
+  background-color: turquoise;
+}
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
 .site-nav .current {
   color: var(--accent-color);
+}
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+.contacts-nav {
+  display: flex;
+  margin-left: auto;
+}
+.contacts-nav .item + .item {
+  margin-left: 50px;
 }
 .header-link {
   color: var(--primary-text-color);
@@ -79,7 +113,15 @@ button {
 }
 
 /* Main index*/
+
+.hero {
+  text-align: center;
+}
 .hero-tittle {
+  margin-top: 0;
+  margin-bottom: 30px;
+  background-color: turquoise;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -89,29 +131,62 @@ button {
   color: var(--white-color);
 }
 .hero-button {
+  margin-bottom: 200px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
+  text-align: center;
 }
 .hero-button:focus {
   color: var(--primary-text-color);
   background-color: var(--secondary-bg-color);
 }
-.benefits {
-  display: none;
+.benefits-h {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
+
+/* Преимущества */
+.benefits {
+  display: flex;
+}
+.benefits .item + .item {
+  margin-left: 30px;
+}
+
 .benefits-tittle {
+  margin-top: 94px;
+  margin-bottom: 10px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 .benefits-text {
+  margin-top: 0px;
+  margin-bottom: 94px;
   line-height: 1.7;
   color: var(--secondary-text-color);
 }
-.what-we-do,
+
+/* Чем мы занимаемся */
+.what-we-do {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: flex;
+}
+.what-we-do .item + .item {
+  margin-left: 30px;
+}
+.what-we-do-title,
 .our-team {
   font-weight: 700;
   font-size: 36px;
