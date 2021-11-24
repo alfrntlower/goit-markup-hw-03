@@ -14,12 +14,15 @@
   --secondary-bg-color: #f5f4fa;
   --main-bg-color: #e0e0e0;
   --black-color: #000000;
+  --header-border-color: #ececec;
+  --card-border-color: #eeeeee;
+  --hero-bg-color: #2f303a;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 
-  /* background-color: var(--main-bg-color);*/
+  background-color: var(--white-color);
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -43,16 +46,24 @@ button {
   text-align: center;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
 }
 
 /* Header */
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--header-border-color);
+}
 
 .logo-link {
   font-family: Raleway;
@@ -71,7 +82,6 @@ button {
   color: var(--black-color);
 }
 .main-nav {
-  border-bottom: 1px #ececec;
   display: flex;
   align-items: center;
   border-color: var(--white-color);
@@ -120,14 +130,15 @@ button {
 /* Main index*/
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
-  background-color: #2f303a;
+  background-color: var(--hero-bg-color);
 }
 .hero-tittle {
   max-width: 696px;
   margin-top: 0px;
   margin-bottom: 30px;
-  padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
 
@@ -140,8 +151,6 @@ button {
   color: var(--white-color);
 }
 .hero-button {
-  margin-bottom: 200px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
@@ -174,14 +183,14 @@ button {
 }
 
 .benefits-tittle {
-  margin-top: 94px;
   margin-bottom: 10px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 .benefits-text {
   margin-top: 0px;
-  margin-bottom: 94px;
+
+  font-weight: 400;
   line-height: 1.7;
   color: var(--secondary-text-color);
 }
@@ -200,7 +209,6 @@ button {
 }
 .what-we-do {
   margin-top: 0px;
-  margin-bottom: 94px;
   display: flex;
   justify-content: center;
 }
@@ -216,7 +224,6 @@ button {
 .our-team-title {
   margin-top: 0px;
   margin-bottom: 50px;
-  padding-top: 94px;
 
   font-weight: 700;
   font-size: 36px;
@@ -235,9 +242,10 @@ button {
   margin-left: 30px;
 }
 .our-team .item {
-  margin-bottom: 94px;
-
   background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-fs-name {
@@ -263,11 +271,9 @@ button {
 /* Portfolio page*/
 
 .filter-buttons {
-  padding-top: 94px;
   display: flex;
+  margin-bottom: 50px;
   justify-content: center;
-
-  outline: 2px solid tomato;
 }
 .filter-buttons .item + .item {
   margin-left: 8px;
@@ -291,26 +297,26 @@ button {
 }
 .card-set-container {
   margin-top: 34px;
-  margin-bottom: 94px;
 }
 .card-set {
   display: flex;
   /* Делаем Flex-контейнет многострочным */
   flex-wrap: wrap;
   /* Компенсируем маржины элементов */
-  margin-left: -10px;
-  margin-top: -10px;
+  margin-left: -30px;
+  margin-top: -30px;
   list-style: none;
 }
 .card-set .item {
   /* Задаём всем элементам маржины слева и сверху */
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 28px;
+  margin-top: 30px;
   /*  Задаём ширину элементов  */
-  flex-basis: calc((100% - 30px) / 3);
-  background-color: #fff;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  flex-basis: calc((100% - 87px) / 3);
+  background-color: var(--white-color);
+  border: 1px solid var(--card-border-color);
+  /* box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); */
 }
 .ex-works-title {
   padding-left: 24px;
@@ -337,11 +343,12 @@ button {
 
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-link {
   display: block;
-  padding-top: 60px;
   margin-bottom: 20px;
 
   font-family: Raleway;
@@ -359,15 +366,15 @@ button {
 }
 .footer-text {
   margin-top: 0;
-  margin-bottom: 9px;
-
+  margin-bottom: 0;
   font-style: normal;
+  font-weight: 400;
   line-height: 1.7;
   color: var(--white-color);
 }
 .footer-contacts {
   display: block;
-  margin-bottom: 9px;
+
   color: var(--secondary-text-color);
   text-decoration: none;
   font-style: normal;
@@ -375,7 +382,12 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
+.footer-item {
+  margin-bottom: 9px;
+}
+.footer-item:nth-last-child(-n + 1) {
+  margin-bottom: 0px;
+}
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--white-color);
