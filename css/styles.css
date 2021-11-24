@@ -30,8 +30,12 @@ body {
   padding: 0;
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 /* Button*/
 button {
+  border: transparent;
   font-family: inherit;
   cursor: pointer;
   border-radius: 4px;
@@ -67,6 +71,7 @@ button {
   color: var(--black-color);
 }
 .main-nav {
+  border-bottom: 1px #ececec;
   display: flex;
   align-items: center;
   border-color: var(--white-color);
@@ -119,14 +124,17 @@ button {
   background-color: #2f303a;
 }
 .hero-tittle {
+  max-width: 696px;
   margin-top: 0px;
   margin-bottom: 30px;
   padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
-  text-align: center;
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
@@ -194,6 +202,7 @@ button {
   margin-top: 0px;
   margin-bottom: 94px;
   display: flex;
+  justify-content: center;
 }
 .what-we-do .item + .item {
   margin-left: 30px;
@@ -217,6 +226,7 @@ button {
 }
 .our-team {
   margin-top: 0px;
+  justify-content: center;
 
   display: flex;
   align-items: center;
@@ -251,6 +261,18 @@ button {
 }
 
 /* Portfolio page*/
+
+.filter-buttons {
+  padding-top: 94px;
+  display: flex;
+  justify-content: center;
+
+  outline: 2px solid tomato;
+}
+.filter-buttons .item + .item {
+  margin-left: 8px;
+}
+
 .button-portfolio {
   font-weight: 500;
   font-size: 16px;
@@ -267,13 +289,40 @@ button {
 .filter {
   display: none;
 }
+.card-set-container {
+  margin-top: 34px;
+  margin-bottom: 94px;
+}
+.card-set {
+  display: flex;
+  /* Делаем Flex-контейнет многострочным */
+  flex-wrap: wrap;
+  /* Компенсируем маржины элементов */
+  margin-left: -10px;
+  margin-top: -10px;
+  list-style: none;
+}
+.card-set .item {
+  /* Задаём всем элементам маржины слева и сверху */
+  margin-left: 10px;
+  margin-top: 10px;
+  /*  Задаём ширину элементов  */
+  flex-basis: calc((100% - 30px) / 3);
+  background-color: #fff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
 .ex-works-title {
+  padding-left: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .ex-works-text {
+  padding-left: 24px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
