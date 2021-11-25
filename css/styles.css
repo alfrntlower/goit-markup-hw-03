@@ -45,7 +45,21 @@ button {
   padding: 10px 32px;
   text-align: center;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  display: blok;
+  max-width: 100%;
+  height: auto;
+}
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -163,6 +177,15 @@ button {
   color: var(--primary-text-color);
   background-color: var(--secondary-bg-color);
 }
+
+/* Преимущества */
+.benefits-container {
+  padding-bottom: 0px;
+}
+.benefits {
+  display: flex;
+  justify-content: space-between;
+}
 .benefits-h {
   position: absolute;
   width: 1px;
@@ -174,20 +197,13 @@ button {
   clip: rect(0 0 0 0);
 }
 
-/* Преимущества */
-.benefits {
-  display: flex;
-}
-.benefits .item + .item {
-  margin-left: 30px;
-}
-
 .benefits-tittle {
   margin-bottom: 10px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 .benefits-text {
+  width: 270px;
   margin-top: 0px;
 
   font-weight: 400;
@@ -309,26 +325,29 @@ button {
 }
 .card-set .item {
   /* Задаём всем элементам маржины слева и сверху */
-  margin-left: 28px;
+  margin-left: 30px;
   margin-top: 30px;
+  width: 370px;
   /*  Задаём ширину элементов  */
-  flex-basis: calc((100% - 87px) / 3);
+  flex-basis: calc((100% - 90px) / 3);
   background-color: var(--white-color);
   border: 1px solid var(--card-border-color);
   /* box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); */
 }
-.ex-works-title {
+.card-set-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 24px;
-
+}
+.ex-works-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .ex-works-text {
-  padding-left: 24px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
